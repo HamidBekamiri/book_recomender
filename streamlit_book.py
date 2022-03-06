@@ -20,13 +20,14 @@ def loaddata():
     dfdict = df.iloc[:,[4,5,6]].copy()
     dfdict = dfdict.drop_duplicates()
     dfdict.index = range(len(dfdict))
-    IDtoNameDict = dict(zip(list(dfdict.ProductId),list(dfdict["Book-Title"])))
     #These lists are for the dropbown menus
     listofbooks = list(dfdict["Book-Title"].unique())
     listofauthors = list(dfdict["Book-Author"].unique())
-    return model, df, dfdict, IDtoNameDict, listofbooks, listofauthors
+    return model, df, dfdict, listofbooks, listofauthors
 
-model, df, dfdict, IDtoNameDict, listofbooks, listofauthors = loaddata()
+model, df, dfdict, listofbooks, listofauthors = loaddata()
+IDtoNameDict = dict(zip(list(dfdict.ProductId),list(dfdict["Book-Title"])))
+
 col_one_list_tit = listofbooks[:100]
 col_one_list_auth = listofauthors[:100]
 cols = st.columns((2))
