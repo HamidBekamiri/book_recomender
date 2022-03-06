@@ -22,9 +22,9 @@ def loaddata():
     #These lists are for the dropbown menus
     listofbooks = list(dfdict["Book-Title"].unique())
     listofauthors = list(dfdict["Book-Author"].unique())
-    return model, df, dfdict, listofbooks, listofauthors
+    return df, dfdict, listofbooks, listofauthors
 
-model, df, dfdict, listofbooks, listofauthors = loaddata()
+df, dfdict, listofbooks, listofauthors = loaddata()
 IDtoNameDict = dict(zip(list(dfdict.ProductId),list(dfdict["Book-Title"])))
 
 col_one_list_tit = listofbooks[:100]
