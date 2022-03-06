@@ -40,7 +40,7 @@ cols_2 = st.columns((1, 1))
 book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_auther)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])[0]
 
 if cols_2[0].button("Submit"):
-    if len(book1) == 1:
+    if len(book1) =! 1:
         #passing the book IDs to one list 
         listofproducts = [book1]
         #Making recommendation for books according to cosine similarity, passing the listofproducts to reommend
