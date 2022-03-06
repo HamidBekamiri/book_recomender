@@ -13,7 +13,7 @@ st.subheader('David Project')
 
 @st.cache 
 def loaddata():
-    model = tc.load_model("https://github.com/HamidBekamiri/book_recomender/tree/main/model")
+    model = tc.load_model("https://github.com/HamidBekamiri/book_recomender/tree/main/model/")
     df = pd.read_csv('dfrecom.csv')
     df["ProductId"] = df["ProductId"].astype(str)
     #Creating dataframe to make dictionary of books IDs and book titles 
