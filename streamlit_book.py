@@ -24,6 +24,8 @@ def loaddata():
     listofauthors = list(dfdict["Book-Author"].unique())
     return df, dfdict, listofbooks, listofauthors
 
+model = tc.load_model("RS.model")
+
 df, dfdict, listofbooks, listofauthors = loaddata()
 IDtoNameDict = dict(zip(list(dfdict.ProductId),list(dfdict["Book-Title"])))
 
