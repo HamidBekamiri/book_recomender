@@ -69,7 +69,7 @@ books.extend(book2)
 books.extend(book3)
 books.extend(book4)
 books.extend(book5)
-
+st.write(len(books))
 
 if cols[0].button("Submit"):
     if len(books) != 0:
