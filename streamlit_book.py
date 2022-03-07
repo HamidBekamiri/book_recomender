@@ -35,6 +35,10 @@ cols = st.columns((2))
 selectbox_title = cols[0].selectbox('Please choose the book title', col_one_list_tit, index=0)
 selectbox_auther = cols[1].selectbox('Please choose the author', col_one_list_auth)
 
+cols_1 = st.columns((2))
+selectbox_title_1 = cols_1[0].selectbox('Please choose the book title', col_one_list_tit, index=0)
+selectbox_auther_1 = cols_1[1].selectbox('Please choose the author', col_one_list_auth)
+
 cols_2 = st.columns((1, 1))
 
 book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_auther)&(dfdict["Book-Title"] ==selectbox_title)].iloc[:,2])
