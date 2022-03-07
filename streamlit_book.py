@@ -74,11 +74,11 @@ st.write(len(books))
 if cols[0].button("Submit"):
     if len(books) != 0:
         books = []
-        book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_1)&(dfdict["Book-Title"] ==selectbox_title_1)].iloc[:,2])[0]
-        book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_2)&(dfdict["Book-Title"] ==selectbox_title_2)].iloc[:,2])[0]
-        book3 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_3)&(dfdict["Book-Title"] ==selectbox_title_3)].iloc[:,2])[0]
-        book4 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_4)&(dfdict["Book-Title"] ==selectbox_title_4)].iloc[:,2])[0]
-        book5 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_5)&(dfdict["Book-Title"] ==selectbox_title_5)].iloc[:,2])[0]
+        book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_auther_1)&(dfdict["Book-Title"] ==selectbox_title_1)].iloc[:,2])[0]
+        book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_auther_2)&(dfdict["Book-Title"] ==selectbox_title_2)].iloc[:,2])[0]
+        book3 = list(dfdict[(dfdict["Book-Author"]==selectbox_auther_3)&(dfdict["Book-Title"] ==selectbox_title_3)].iloc[:,2])[0]
+        book4 = list(dfdict[(dfdict["Book-Author"]==selectbox_auther_4)&(dfdict["Book-Title"] ==selectbox_title_4)].iloc[:,2])[0]
+        book5 = list(dfdict[(dfdict["Book-Author"]==selectbox_auther_5)&(dfdict["Book-Title"] ==selectbox_title_5)].iloc[:,2])[0]
         books.extend(book1)
         books.extend(book2)
         books.extend(book3)
