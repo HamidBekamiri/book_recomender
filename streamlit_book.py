@@ -58,23 +58,33 @@ selectbox_title_5 = cols_5[0].selectbox('Please choose the book title', col_one_
 selectbox_auther_5 = cols_5[1].selectbox('Please choose the author', col_one_list_auth, key = count)
 
 cols = st.columns((1, 1))
-
+books = []
 book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_1)&(dfdict["Book-Title"] ==selectbox_title_1)].iloc[:,2])
 book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_2)&(dfdict["Book-Title"] ==selectbox_title_2)].iloc[:,2])
 book3 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_3)&(dfdict["Book-Title"] ==selectbox_title_3)].iloc[:,2])
 book4 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_4)&(dfdict["Book-Title"] ==selectbox_title_4)].iloc[:,2])
 book5 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_5)&(dfdict["Book-Title"] ==selectbox_title_5)].iloc[:,2])
-books = [*book1, *book2, *book3, *book4, *book5] 
+books.extend(book1)
+books.extend(book2)
+books.extend(book3)
+books.extend(book4)
+books.extend(book5)
 
 
 if cols[0].button("Submit"):
     if len(books) != 0:
+        books = []
         book1 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_1)&(dfdict["Book-Title"] ==selectbox_title_1)].iloc[:,2])[0]
         book2 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_2)&(dfdict["Book-Title"] ==selectbox_title_2)].iloc[:,2])[0]
         book3 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_3)&(dfdict["Book-Title"] ==selectbox_title_3)].iloc[:,2])[0]
         book4 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_4)&(dfdict["Book-Title"] ==selectbox_title_4)].iloc[:,2])[0]
         book5 = list(dfdict[(dfdict["Book-Author"]==selectbox_title_5)&(dfdict["Book-Title"] ==selectbox_title_5)].iloc[:,2])[0]
-        books = [*book1, *book2, *book3, *book4, *book5] 
+        books.extend(book1)
+        books.extend(book2)
+        books.extend(book3)
+        books.extend(book4)
+        books.extend(book5)
+ 
         #passing the book IDs to one list 
         listofproducts = [books]
         #Making recommendation for books according to cosine similarity, passing the listofproducts to reommend
