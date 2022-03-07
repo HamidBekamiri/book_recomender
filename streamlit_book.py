@@ -91,6 +91,7 @@ if cols[0].button("Submit"):
 
         #Making recommendation for books according to cosine similarity, passing the listofproducts to reommend
         recommendation_item = model.get_similar_items(items=listofproducts, k=10)
+        st.write(recommendation_item)
         #Creating dataframe
         dfitem = pd.DataFrame(recommendation_item)
         #Data manipulation and transformation to show the top 10 books to recommend
