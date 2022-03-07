@@ -87,6 +87,8 @@ if cols[0].button("Submit"):
  
         #passing the book IDs to one list 
         listofproducts = books
+        st.write(listofproducts)
+
         #Making recommendation for books according to cosine similarity, passing the listofproducts to reommend
         recommendation_item = model.get_similar_items(items=listofproducts, k=10)
         #Creating dataframe
