@@ -92,6 +92,7 @@ if cols[0].button("Submit"):
         #Creating dataframe
         dfitem = pd.DataFrame(recommendation_item)
         #Data manipulation and transformation to show the top 10 books to recommend
+        st.table(dfitem)
         dfitem['item_occ'] = dfitem.groupby('similar').similar.transform('count')
         dfitem = dfitem.sort_values(["item_occ", "score"],ascending=(False,False))
         dfitem = dfitem[~dfitem["similar"].isin(listofproducts)]
