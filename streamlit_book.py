@@ -31,11 +31,11 @@ IDtoNameDict = dict(zip(list(dfdict.ProductId),list(dfdict["Book-Title"])))
 
 col_one_list_tit = listofbooks
 col_one_list_auth = listofauthors
-cols = st.columns((2))
+cols = st.columns((2, 1))
 selectbox_title = cols[0].selectbox('Please choose the book title', col_one_list_tit)
 selectbox_auther = cols[1].selectbox('Please choose the author', col_one_list_auth)
 
-cols_1 = st.columns((2))
+cols_1 = st.columns((2, 2))
 selectbox_title_1 = cols_1[0].selectbox('Please choose the book title', col_one_list_tit)
 selectbox_auther_1 = cols_1[1].selectbox('Please choose the author', col_one_list_auth)
 
